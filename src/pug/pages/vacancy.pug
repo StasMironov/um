@@ -1,0 +1,87 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+	- var setTitle = 'Вакансии';
+	- var bildboard_include = 'simple';
+	- var bildboardImg = ['img/dataBild/img1.jpg', 'img/dataBild/img_tablet1.jpg', 'img/dataBild/img_mobile1.jpg'];
+	- var includeBloc = 'vacancy';
+	- var include = "vacancy";
+
+	- var quote = 'h2';
+	- var quoteTitle = 'Мы - одно из ведущих агенств в городе!';
+	- var quoteInfo = ['Наша компания работает со многими клиентами, например, “Магнитогорский Металл”, “Роза Ветров”, “МБФ”. Мы стараемся решать только интересные задачи и закрывать их точно в срок! ', 'Uralmedias с теплотой и вниманием относится к молодым сотрудникам и помогает адаптироваться на новом рабочем месте. Все участники нашей компании стараются постоянно самосовершенствоваться и достигать новых высот, а Uralmedias безусловно помогает им в этом!'];
+
+block content
+	div(data-barba="container" data-barba-namespace="page")
+		include ../modules/bildboard
+		include ../modules/breadcrumbs
+		include ../modules/quote
+		include ../modules/include
+		.demand
+			.demand__container.container
+				h2.demand__title.title-3 Мы ждем тебя, если ты
+				.demand__cover
+					.demand__items
+						.demand__item
+							.demand__header Целеустремленный
+							.demand__txt Постоянно стремишься узнать что-то новое, незнакомые задачи кажутся тебе приключением, а не припятствием. 
+						.demand__item
+							.demand__header отвественный
+							.demand__txt Если берешься за какое-то задание и обещаешь сделать его в срок, то вовремя завершаешь задачу. 
+						.demand__item
+							.demand__header открытый
+							.demand__txt Всегда готов к командной работе. Не боишься попросить помощь или оказать ее другим участникам агентства.
+						.demand__item
+							.demand__header обучаемый
+							.demand__txt Ты быстро учишься и никогда не задаешь дважды один и тот же вопрос.
+		.vacancy
+			.vacancy__container.container
+				h2.vacancy__title.title-4 Открытые вакансии
+				.vacancy__cover
+					.vacancy__items
+						a(href="javascript:void(0);").vacancy__item.link
+							.vacancy__article Web-разработчик
+							.vacancy__txt Город: Магнитогорск
+							.link.link-detail
+								.link-detail__txt узнать подробнее о вакансии
+								.link-detail__ic 
+									+svg('arrow-small')
+						a(href="javascript:void(0);").vacancy__item.link
+							.vacancy__article UX-дизайнер
+							.vacancy__txt Город: Магнитогорск
+							.link.link-detail
+								.link-detail__txt узнать подробнее о вакансии
+								.link-detail__ic 
+									+svg('arrow-small')
+						a(href="javascript:void(0);").vacancy__item.link
+							.vacancy__article Интернет-маркетолог
+							.vacancy__txt Город: Магнитогорск
+							.link.link-detail
+								.link-detail__txt узнать подробнее о вакансии
+								.link-detail__ic 
+									+svg('arrow-small')
+						a(href="javascript:void(0);").vacancy__item.link
+							.vacancy__article Front-end разработчик
+							.vacancy__txt Город: Магнитогорск
+							.link.link-detail
+								.link-detail__txt узнать подробнее о вакансии
+								.link-detail__ic 
+									+svg('arrow-small')
+						a(href="javascript:void(0);").vacancy__item.link
+							.vacancy__article SEO-специалист
+							.vacancy__txt Город: Магнитогорск
+							.link.link-detail
+								.link-detail__txt узнать подробнее о вакансии
+								.link-detail__ic 
+									+svg('arrow-small')
+						a(href="javascript:void(0);").vacancy__item.link
+							.vacancy__article проектировщик
+							.vacancy__txt Город: Магнитогорск
+							.link.link-detail
+								.link-detail__txt узнать подробнее о вакансии
+								.link-detail__ic 
+									+svg('arrow-small')
+		include ../modules/place
+block script

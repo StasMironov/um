@@ -1,0 +1,84 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+	- var setTitle = 'НАШИ УСЛУГИ';
+	- var include = 'link';
+	
+	- var quote = 'h4';
+	- var quoteTitle = 'Что мы можем предложить?';
+	- var quoteInfo = ['Uralmedias оказывает самый полный комплекс услуг в работе с Вашим бизнесом. Наша работа - это погружение в сферу Вашей деятельности, ее проблемы и трудности, цели и задачи.'];
+	
+	- var bildboard_include = 'simple';
+	- var bildboardImg = ['img/dataBild/img1.jpg', 'img/dataBild/img_tablet1.jpg', 'img/dataBild/img_mobile1.jpg'];
+
+block content
+	div(data-barba="container" data-barba-namespace="page")
+		include ../modules/bildboard
+		include ../modules/breadcrumbs
+		include ../modules/quote
+
+		.offer
+			.offer__container.container
+				.offer__cover
+					.offer__items
+						a(href="javascript:void(0);").offer__item 
+							.offer__pic
+								+svg('landing')
+							.offer__content
+								.offer__article Лендинг
+								.offer__txt веб-страница, основной задачей которой является сбор контактных данных целевой аудитории
+							.offer__link.link.link--detail ПОДРОБНЕЕ
+						a(href="javascript:void(0);").offer__item 
+							.offer__pic
+								+svg('corporate')
+							.offer__content
+								.offer__article Корпоративный сайт
+								.offer__txt полноценное представительство компании в интернете, помогающее привлечь новых коиентов
+							.offer__link.link.link--detail ПОДРОБНЕЕ
+						a(href="javascript:void(0);").offer__item 
+							.offer__pic
+								+svg('online-store')
+							.offer__content
+								.offer__article  интернет-магазин
+								.offer__txt Сайт, который содержит товары&nbsp;или&nbsp;услуги компании
+							.offer__link.link.link--detail ПОДРОБНЕЕ
+						a(href="javascript:void(0);").offer__item 
+							.offer__pic
+								+svg('mobile-app')
+							.offer__content
+								.offer__article Мобильное приложение
+								.offer__txt Программное обеспечение,  разработанное под конкретную мобильную платформу
+							.offer__link.link.link--detail ПОДРОБНЕЕ
+						a(href="javascript:void(0);").offer__item 
+							.offer__pic
+								+svg('seo')
+							.offer__content
+								.offer__article SEO-оптимизация
+								.offer__txt Повышение позиций сайта в поисковых системах для привлечения целевой аудитории
+							.offer__link.link.link--detail ПОДРОБНЕЕ
+						a(href="javascript:void(0);").offer__item 
+							.offer__pic
+								+svg('promotion')
+							.offer__content
+								.offer__article Продвижение
+								.offer__txt Комплекс мер по обеспечению посещаемости сайта целевыми посетителями
+							.offer__link.link.link--detail ПОДРОБНЕЕ
+						a(href="javascript:void(0);").offer__item 
+							.offer__pic
+								+svg('ad')
+							.offer__content
+								.offer__article  Реклама
+								.offer__txt Продуктивный механизм для роста продаж и привлечения новых клиентов
+							.offer__link.link.link--detail ПОДРОБНЕЕ
+						a(href="javascript:void(0);").offer__item 
+							.offer__pic
+								+svg('support')
+							.offer__content
+								.offer__article Шаблонная разработка
+								.offer__txt Используется в качестве готового решения для создания сайтов
+							.offer__link.link.link--detail ПОДРОБНЕЕ
+		include ../modules/place
+
+block script

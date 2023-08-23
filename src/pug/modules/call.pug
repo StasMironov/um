@@ -1,0 +1,43 @@
+.call(name="request")
+    .call__container.container
+        .call__grid
+            .call__left
+                .call__top
+                    h2.call__title.title-4 Хотите работать с&nbsp;нами?
+                .call__bottom
+                    .call__img
+                        img(src="img/team/t1.png" alt="")
+                    .call__name Константин
+                    .call__status Руководитель компании
+            .call__right
+                form.call__form
+                    .call__bloc
+                        .form-group.select
+                            .form-group__label Какая услуга Вас интересует?
+                            <select class="js-example-basic-single" name="state">
+                                <option value="LEND">Лендинг</option>
+                                <option value="CORP">Корпоративный сайт</option>
+                                <option value="SHOP">Интернет-магазин</option>
+                                <option value="APP">Мобильное приложение</option>
+                                <option value="SEO">SEO-оптимизация</option>
+                                <option value="PROM">Продвижение</option>
+                                <option value="ADVERT">Реклама</option>
+                            </select>
+                        .form-group
+                            .form-group__label Ваше имя
+                            input(type="text" placeholder="Введите имя" name='').form-group__input
+                        .form-group
+                            .form-group__label Контактный телефон
+                            input(type="tel" placeholder="+7 (___) ___-__-__" name='').form-group__input.js-phone-mask
+                        .form-group
+                            .form-group__label Ваша почта
+                            input(type="text" placeholder="Email" name='').form-group__input
+                    .form-group
+                        .form-group__label Что нам стоит знать?
+                        textarea(rows="3" placeholder="Дополнительная информация" name='').form-group__input
+
+                    button(type="submit").btn.btn--special.link.js-btn-grace
+                        .btn__special
+                            span Отправить заявку
+                        .btn__text Отправить заявку
+                    .call__quote Нажимая кнопку “Заказать проект”, вы принимаете условия <a class="link" href="javascript:void(0);">пользовательского соглашения</a>

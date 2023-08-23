@@ -1,0 +1,141 @@
+.rating {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+
+  @media(max-width: 1024px) {
+    justify-content: center;
+  }
+
+  @media(max-width: 620px) {
+    max-width: 385px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 24px;
+
+    @media(max-width: 1024px) {
+      font-size: 20px;
+      margin-top: 13px;
+    }
+
+    @media(max-width: 620px) {
+      font-size: 15px;
+      margin-top: 15px;
+    }
+  }
+
+  &__text {
+    line-height: 1.7;
+    margin-top: 12px;
+    font-size: 17px;
+
+    @media(max-width: 1024px) {
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    @media(max-width: 768px) {
+      max-width: initial;
+    }
+
+    @media(max-width: 620px) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @media(max-width: 620px) {
+        display: inline-block;
+        max-width: 111px;
+        margin: 6px auto 0;
+        font-size: 11px;
+        line-height: 1.7;
+        letter-spacing: -0.03em;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 132px -30px 0;
+
+    @media(max-width: 1024px) {
+      justify-content: center;
+      margin: 105px -22px 0;
+    }
+
+    @media(max-width: 620px) {
+      margin: 79px -10px 0;
+    }
+  }
+
+  &__item {
+    width: calc(33.333% - 60px);
+    max-width: 212px;
+    margin: 0 30px;
+
+    @media(max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(33.333% - 44px);
+      max-width: 178px;
+      margin: 0 22px;
+    }
+
+    @media(max-width: 620px) {
+      width: calc(33.33% - 20px);
+      max-width: 95px;
+      margin: 0 10px;
+    }
+
+    &:hover,
+    &:focus {
+
+      .rating__img {
+        filter: brightness(10);
+      }
+    }
+  }
+
+  &__img {
+    max-width: 50px;
+    height: 68px;
+    transition: 0.2s ease-in-out;
+
+    @media(max-width: 1024px) {
+      max-width: 42px;
+      height: 60px;
+    }
+
+    @media(max-width: 620px) {
+      height: 55px;
+    }
+  }
+
+  &__note {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-top: 156px;
+
+    @media(max-width: 1024px) {
+      max-width: 310px;
+      font-size: 12px;
+      margin: 36px auto 0;
+    }
+
+    @media(max-width: 620px) {
+      max-width: 258px;
+      font-size: 10px;
+      line-height: 1.6;
+      margin-top: 30px;
+    }
+  }
+}

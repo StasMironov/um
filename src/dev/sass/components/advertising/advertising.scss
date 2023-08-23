@@ -1,0 +1,112 @@
+.advertising {
+    margin-top: 45px;
+    margin-bottom: 80px;
+
+    @media(max-width: 1024px) {
+        margin-bottom: 70px;
+    }
+
+    @media(max-width: 768px) {
+        margin-top: 40px;
+    }
+
+    @media(max-width: 620px) {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    &__cover {
+        @media(max-width: 768px) {
+            max-width: 630px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -61px;
+        justify-content: space-between;
+
+        @media(max-width: 1024px) {
+            margin-left: -30px;
+        }
+
+        @media(max-width: 768px) {
+            margin-left: -25px;
+            margin-top: -25px;
+        }
+
+        @media(max-width: 620px) {
+            margin-left: 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: calc(25% - 61px);
+        margin-left: 61px;
+
+        @media(max-width: 1024px) {
+            width: calc(25% - 30px);
+            margin-left: 30px;
+        }
+
+        @media(max-width: 768px) {
+            width: calc(50% - 25px);
+            margin-left: 25px;
+            margin-top: 25px;
+        }
+
+        @media(max-width: 620px) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &__txt {
+        text-align: center;
+        margin-top: 17px;
+        font-size: 14px;
+        line-height: 21px;
+
+        @media(max-width: 1024px) {
+            margin-top: 10px;
+        }
+
+        @media(max-width: 768px) {
+            margin-top: 8px;
+        }
+
+        @media(max-width: 620px) {
+            max-width: 300px;
+            width: 100%;
+        }
+    }
+
+    &__pic {
+        width: 88px;
+        height: 88px;
+        flex-shrink: 0;
+
+        @media(max-width: 1024px) {
+            width: 67px;
+            height: 67px;
+            background-size: cover;
+        }
+
+        @media(max-width: 768px) {
+            width: 60px;
+            height: 60px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: $green-1;
+        }
+    }
+}

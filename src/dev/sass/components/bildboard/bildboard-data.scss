@@ -1,0 +1,234 @@
+.bildboard-data {
+    position: relative;
+    background-size: cover;
+    padding-top: 78px;
+    padding-bottom: 88px;
+    min-height: 408px;
+    display: flex;
+    flex: 1;
+
+    @media(max-width: 1024px) {
+        padding-bottom: 52px;
+        min-height: 317px;
+        padding-top: 78px;
+    }
+
+    @media(max-width:620px) {
+        min-height: 270px;
+        padding-bottom: 52px;
+        padding-top: 52px;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        padding-top: 5em;
+        color: white;
+
+        @media(max-width: 1024px) {
+            padding-top: 1.7em;
+        }
+
+        @media(max-width: 620px) {
+            padding-top: 0.9em;
+        }
+    }
+
+    &__title {
+        color: white;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        line-height: 81px;
+
+        @media(max-width: 1024px) {
+            line-height: 66px;
+            letter-spacing: -1.6px;
+        }
+
+        @media(max-width: 620px) {
+            line-height: 40px;
+        }
+
+        &--short {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    &__quote {
+        font-size: 20px;
+        line-height: 31px;
+        text-align: center;
+        max-width: 775px;
+        margin-top: 1.45em;
+
+        br {
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.52);
+    }
+
+    .btn {
+        margin: 4.57em auto 0;
+
+        @media(max-width: 1024px) {
+            margin: 1.8em auto 0;
+        }
+
+        @media(max-width: 620px) {
+            margin: 2.7em auto 0;
+        }
+    }
+
+    &--special {
+        padding-bottom: 6.8em;
+
+        .bildboard-data {
+            &__container {
+                padding-top: 4.43em;
+                justify-content: center;
+            }
+
+            &__title {
+                max-width: 940px;
+            }
+        }
+    }
+
+    &--special-btn {
+        .bildboard-data {
+            &__container {
+                padding-top: 4.43em;
+                justify-content: center;
+            }
+
+            &__title {
+                max-width: 1090px;
+            }
+
+            &__quote {
+                max-width: 910px;
+                width: 100%;
+            }
+        }
+    }
+
+    &--left {
+        .bildboard-data {
+            &__container {
+                align-items: flex-start;
+            }
+
+            &__title,
+            &__quote {
+                text-align: left;
+            }
+
+            &__title {
+                max-width: 1020px;
+            }
+        }
+
+        .btn {
+            margin-left: 0;
+        }
+    }
+
+    &--dark {
+        background-color: $black-3;
+
+        .bildboard-data {
+            &__title {
+                max-width: 1234px;
+                width: 100%;
+
+                span {
+                    background-color: $red-3;
+                    display: inline-block;
+                    line-height: 66px;
+                    padding: 0 0.13em;
+
+                    @media(max-width: 1024px) {
+                        line-height: 52px;
+                        line-height: 1.2;
+                    }
+
+                    @media(max-width: 620px) {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0 0.22em 0;
+                    }
+                }
+            }
+        }
+
+        &:after {
+            content: none;
+        }
+    }
+
+    &--transparent {
+        padding-bottom: 12px;
+        min-height: auto;
+
+        &:after {
+            background-color: transparent;
+        }
+
+        .bildboard-data {
+            padding-bottom: 0.75em;
+
+            &__title {
+                color: $black;
+            }
+
+            &__container {
+                padding-top: 3.93em;
+            }
+        }
+    }
+
+    &--ad {
+
+        &::after {
+            background: rgba(51, 51, 51, 0.8);
+        }
+    }
+
+    picture {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

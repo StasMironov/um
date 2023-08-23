@@ -1,0 +1,120 @@
+extends ../layout/main
+
+block variables
+	- var pageClass = 'index-page';
+	- var setTitle = 'Мы являемся SEO-компанией №1 в Магнитогорске по версии cms magazine';
+	- var include = 'btn';
+	- var bildboard_img = "background-image: url(img/dataBild/img6.jpg);";
+
+	- var quote = 'h2';
+	- var quoteTitle = 'Что входит в SEO-оптимизацию сайта?';
+	- var quoteInfo = ['SEO-продвижение сайта является базовой составляющей продвижения сайта. Только после даной услуги можно перейи к полноценному ведению Вашего сайта, чтобы вывести его в топ.']
+
+block content
+	div(data-barba="container" data-barba-namespace="page")
+		.bildboard-data.bildboard-data--special-btn.bildboard-data--dark
+			.bildboard-data__container.container
+				h1.bildboard-data__title.title-1 Мы являемся SEO-компанией №1 в Магнитогорске по версии <span>cms</span>&nbsp;magazine
+				a(href="#request").btn.btn--special.link
+					.btn__special
+						span Отправить заявку менеджеру
+					.btn__text Отправить заявку менеджеру
+
+		include ../modules/breadcrumbs
+		include ../modules/quote
+
+		.seo
+			.seo__container.container
+				.seo__grid
+					.seo__right
+						.seo__cover
+							.seo__items
+								.seo__item Регистрация в каталогах поисковых сетей
+								.seo__item Проверка текста на сайте
+								.seo__item Проверка и корректировка семантического ядра
+								.seo__item Проверка скорости загрузки сайта
+								.seo__item Написание SEO-текстов
+								.seo__item Оптимизация контента страницы и ключевых слов
+								.seo__item Создание и ведение блогов
+								.seo__item Адаптация под смартфоны и планшеты
+								.seo__item Увеличение скорости загрузки сайта
+								.seo__item Оптимизация тегов
+								.seo__item Размещение контента
+								.seo__item Проверка и корректировка разметки
+								.seo__item Проверка наличия корректных файлов robots.txt и sitemap. При необходимости их генерация и настройка
+								
+					.seo__left
+						.seo__cover
+							.seo__blocs
+								a(href="javascript:void(0);").seo__bloc
+									.seo__article SEO-оптимизация Лендинга/сайта визитки
+									.seo__note от 7 дней на разработку
+									.seo__bottom
+										.seo__price от 8 000₽
+										.seo__href.link заказать seo-продвижение
+								a(href="javascript:void(0);").seo__bloc
+									.seo__article SEO-оптимизация Корпоративного сайта
+									.seo__note от 7 дней на разработку
+									.seo__bottom
+										.seo__price от 17 000₽
+										.seo__href.link заказать seo-продвижение
+								a(href="javascript:void(0);").seo__bloc
+									.seo__article SEO-оптимизация Интернет-магазина
+									.seo__note от от 7 дней на разработку
+									.seo__bottom
+										.seo__price от 25 000₽
+										.seo__href.link заказать seo-продвижение
+				.seo-slider
+						.container
+							h2.title-3 Наши работы по SEO-оптимизации сайта
+							include ../modules/slider
+				
+		.seo-result
+			- var quote = 'h4';
+			- var quoteTitle = 'Результаты SEO-оптимизации';
+			- var quoteInfo = ['Чем выше позиция сайта в результатах поиска, тем больше пользователей переходит на него. Именно поэтому продвижение веб-страниц имеет важное значение.']
+
+			include ../modules/quote
+			.seo-result__container.container
+				.seo-result__cover
+					.seo-result__items
+						.seo-result__item 
+							.seo-result__pic(style="background-image: url(./img/icon/set-seo.svg)")
+							.seo-result__text Увеличение конверсии всех источников, уменьшение стоимости привлечения посетителя
+						.seo-result__item 
+							.seo-result__pic(style="background-image: url(./img/icon/set-seo.svg)")
+							.seo-result__text Устранение технических ошибок, уменьшение отказов
+						.seo-result__item 
+							.seo-result__pic(style="background-image: url(./img/icon/set-seo.svg)")
+							.seo-result__text Быстрый и информативный сайт, который нравится пользователям и поисковым системам
+						.seo-result__item 
+							.seo-result__pic(style="background-image: url(./img/icon/set-seo.svg)")
+							.seo-result__text Рост трафика из поиска и увеличение позиций
+		
+		.seo-methods
+			- var quote = 'h4';
+			- var quoteTitle = 'Внутренние и внешние методы оптимизации';
+			- var quoteInfo = [];
+
+			include ../modules/quote
+			.seo-methods__container.container
+				.seo-methods__grid
+					.seo-methods__left
+						.seo-methods__bloc
+							.seo-methods__article Внутренняя оптимизация
+							.seo-methods__txt Чтобы поисковая система понимала, о чем вы хотите рассказать пользователям, информация должна быть размечена специальными тегами. Компания Yandex говорит о 800 факторах, которые относятся к продвижению. Google, в свою очередь, оценивает сайт по 200 параметрам. Однако, несмотря на такое количество факторов, оба поисковых гиганта отводят первое место контенту. Контент — это король, так как текстовый контент страницы очень влияет на поисковое продвижение. Работа над текстами — сложная и ответственная задача.
+						.seo-methods__bloc
+							.seo-methods__article Внешняя оптимизация
+							.seo-methods__txt Важное направление работы с раскруткой сайта в интернете — наращивание ссылок, ведущих на продвигаемый ресурс. Поисковик считает, что чем больше качественных ссылок в интернете размещено на определенную страницу, тем более она может быть интересной. Ключевой момент - это создание качественного контента, на который хочется поставить ссылку, поделиться им в соц. сетях, поставить like или share.
+						.seo-methods__bloc
+							.seo-methods__article Аналитика
+							.seo-methods__txt Специалист по поисковой оптимизации должен быть хорошим аналитиком. Работа по продвижению в поисковиках — работа с большими массивами данных. Важно уметь видеть закономерности и делать выводы. Анализ внесённых изменений и составление плана последующих работ является обязательным этапом.
+					.seo-methods__right
+						.seo-methods__fragment(style="background-image: url(./img/decor/dec3.png)")
+						.seo-methods__inner
+							.seo-methods__bg(style="background-image: url(./img/decor/dec2.png)")
+		include ../modules/accordion
+		include ../modules/call
+		
+
+block script

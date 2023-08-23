@@ -1,0 +1,74 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+	- var setTitle = 'Разработка мобильного приложения';
+	- var bildboard_quote = 'Специально разработанное под функциональные возможности гаджетов программное обеспечение, которое поможет привлечь большое количество пользователей.';
+	- var bildboard_img = "background-image: url(img/dataBild/img12.jpg);";
+	- var includeBloc = 'app';
+	- var include = "landing";
+	- var bildboard_include = 'special-btn';
+	- var priceList = '2'; 
+	- var priceBg = 'background-color: #f6f6f6';
+
+	- var quote = 'app';
+	- var quoteTitle = 'Наши мобильные приложения';
+	- var quoteInfo = ['Мобильное приложение представляет собой разработанную программу для планшетов и смартфонов, которая устанавливается на ту или иную платформу и имеет определенный функционал. Проще говоря, выполняет определенные действия и решает заданный круг вопросов.'];
+
+block content
+	div(data-barba="container" data-barba-namespace="page")
+		.bildboard-data.bildboard-data--special-btn 
+			<picture>
+				<source srcset="/img/dataBild/img1.jpg" media="(min-width: 1025px)">
+				<source media="(min-width: 621px)" srcset="/img/dataBild/img_tablet1.jpg">
+				<source media="(min-width: 320px)" srcset="/img/dataBild/img_mobile1.jpg">
+				<img src="/img/dataBild/img1.jpg" alt="MDN">
+			</picture>
+			.bildboard-data__container.container
+				h1.bildboard-data__title.title-1 Разработка<br>мобильного приложения
+				.bildboard-data__quote #{bildboard_quote}
+				a(href="#request").btn.btn--special.link
+					.btn__special
+						span Отправить заявку менеджеру
+					.btn__text Отправить заявку менеджеру
+
+		include ../modules/breadcrumbs
+		include ../modules/quote
+		include ../modules/include
+		.advantages-app
+			- var quote = 'h4';
+			- var quoteTitle = 'Зачем Вашему бизнесу мобильное приложение?';
+			- var quoteInfo = ['Разработка мобильного приложения - это современное решение, которое сделает ваших клиентов лояльнее и поможет увеличить доход. '];
+			include ../modules/quote
+			.advantages-app__container.container 
+				.advantages-app__wrapper 
+					.advantages-app__cover
+						.advantages-app__items
+							.advantages-app__item
+								.advantages-app__article юзабилити  
+								.advantages-app__txt В современном мире мобильные приложения намного популярнее адаптированных сайтов. Все потому, что приложение имеет продуманный пользовательский интерфейс - это удобно.
+							.advantages-app__item
+								.advantages-app__article Уведомления
+								.advantages-app__txt Приложение выгоднее статичного сайта потому, что после закрытия страницы Вы теряете связь с клиентом. В приложении же можно присылать пользователям различные уведомления. 
+							.advantages-app__item
+								.advantages-app__article Продажи
+								.advantages-app__txt Несомненным преимужеством мобильного приложения - быстрая и удобная онлайн оплата. В отличае от полноценного сайта, в приложении не нужно вводить платежные данные каждый раз.
+							.advantages-app__item
+								.advantages-app__article Фидбэк
+								.advantages-app__txt Обратная связь является одним из ключевых моментов. Вы должны уметь поддерживать ее со своим клиентом, и приложение Вам в этом поможет.
+					.advantages-app__right
+						.advantages-app__img 
+							image(src="./img/app.png" alt="")
+		include ../modules/price
+		.include.include--special-btn  
+			.include__container.container
+				h2.include__title.title-3 Хотите собственное крутое приложение?
+				.include__txt Мы готовы Вам помочь и создать уникальное мобильное приложение. Привлекайте новых клиентов, сокращайте расходы на рекламу и повышайте средний чек!
+				a(href="#").btn.btn--special.link
+					.btn__special
+						span Заказать проект
+					.btn__text Заказать проект
+		include ../modules/seo-slider
+		include ../modules/call
+block script

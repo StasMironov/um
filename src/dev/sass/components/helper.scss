@@ -1,0 +1,153 @@
+.mf-style {
+    background-color: white;
+    color: $black;
+
+    @media(max-width: 620px) {
+        background-color: transparent;
+    }
+
+    .header__item--menu {
+        &:after {
+            border-top-color: $black;
+        }
+
+        &:hover:after {
+            border-top-color: $green-1;
+        }
+    }
+
+
+    .btn--call {
+        border-color: $red-2;
+        color: $red-2;
+
+        &:hover {
+            background-color: $red-2;
+            color: white;
+        }
+    }
+
+    .burger {
+        .line {
+            stroke: $green-1;
+
+            @media(max-width: 620px) {
+                stroke: white;
+            }
+        }
+    }
+
+    .header__logo {
+        svg path {
+            fill: $green-1;
+
+            @media(max-width:620px) {
+                fill: white;
+            }
+        }
+    }
+}
+
+.mf-bg-header {
+    @media(max-width: 620px) {
+         background: white;
+    }
+
+    &:after {
+        background: rgba(255, 255, 255, 0.75);
+        filter: blur(0px);
+
+        @media(max-width: 620px) {
+            background: white;
+            filter: blur(0px);
+       }
+    }
+
+    &+.header__container {
+        .header__logo svg * {
+            fill: #00a4ad;
+        }
+    
+        .burger .line {
+            stroke: #00a4ad;
+        }
+    
+        .link--phone {
+            color: $black;
+        }
+    
+        .btn--call {
+            border-color: #ff7369;
+            color: #ff7369;
+
+            &:hover {
+                color: white;
+                background-color: #ff7369;
+            }
+        }
+    }
+
+   
+}
+
+.mf-transparent {
+    .header__logo {
+        svg path {
+            @media(max-width:620px) {
+                fill: $green-1;
+            }
+        }
+    }
+
+    .burger {
+        .line {
+            stroke: $green-1;
+
+            @media(max-width: 620px) {
+                stroke: $green-1;
+            }
+        }
+    }
+}
+
+.mf-fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transition: linear .3s;
+    padding: 0 calc(var(--wScroll) - (100vw - 100%)) 0 0;
+}
+
+.svg-transparent {
+    fill: none;
+}
+
+.mf-bg-portfolio {
+    .quote {
+        color: white;
+    }
+
+    .portfolio {
+        // &__item {
+ //     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+ // }
+    }
+}
+
+.mf-pin-color {
+    .bildboard-data__title {
+        color: white;
+    }
+
+    .breadcrumbs__link {
+        color: white;
+    }
+
+    .include-menu__link {
+        @media (min-width: 1025px) {
+            color: white;
+        }
+    }
+}

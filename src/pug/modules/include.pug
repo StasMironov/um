@@ -1,0 +1,252 @@
+case includeBloc
+  when 'corporate'
+    .include.include--corporate
+        - var quote = 'h3';
+        - var quoteTitle = 'Разновидности сайтов';
+        - var quoteInfo = ['Перед началом работы наше агентство помогаем определиться с видом корпоративного сайта. Каждый вид соответствует определенным целям компании, которые она хочет донести своей аудитории.'];
+
+        include ./quote
+        .include__container.container
+            .include__cover
+                .include__items
+                    .include__item 
+                        .include__left 
+                            .include__pic(style="background-image: url(./img/icon/set-corporate.png)")
+                        .include__right
+                            .include__header Сайт-визитка 
+                            .include__txt Самый простой вариант. Его используют небольшие фирмы, или компании, не имеющие полноценного сайтаs
+                    .include__item 
+                        .include__left 
+                            .include__pic(style="background-image: url(./img/icon/set-corporate.png)")
+                        .include__right
+                            .include__header Интернет-магазин
+                            .include__txt Другими словами - это электронная торговая площадка со множеством товаров, фотографиями и описанием
+                    .include__item 
+                        .include__left 
+                            .include__pic(style="background-image: url(./img/icon/set-corporate.png)")
+                        .include__right
+                            .include__header Информационный портал
+                            .include__txt Здесь нет рекламы, публикуются новости, рассказывается о новых трендах. Портал работает только в одном направлении. 
+                    .include__item 
+                        .include__left 
+                            .include__pic(style="background-image: url(./img/icon/set-corporate.png)")
+                        .include__right
+                            .include__header Промо-сайт
+                            .include__txt Предназначен исключительно для рекламы. Информирует людей о скидочных неделях, распродажах, поступления новых коллекций.
+  when 'corporate-list'
+    .include.include--transparent
+        - var quote = 'h4';
+        - var quoteTitle = 'Подготовка к заказу';
+        - var quoteInfo = ['Чтобы наша команда оперативно подобрала наилучшее решение для Вашего бизнеса, перед заказом разработки следует подумать над некоторыми вопросами:'];
+
+        include ./quote
+        .include__container.container
+            .include__cover
+                .include__items 
+                    .include__item 
+                        .include__header Цели и задачи
+                        .include__text Каких целей вы хотите добиться? 
+                    .include__item 
+                        .include__header Информация
+                        .include__text Какая информация интересна вашим посетителям?
+                    .include__item 
+                        .include__header Аудитория
+                        .include__text Кто и зачем будет посещать ваш сайт?
+                    .include__item 
+                        .include__header Преимущества
+                        .include__text Чем вы и ваша компания отличаетесь от конкурентов?
+                    .include__item 
+                        .include__header Конкуренты
+                        .include__text Какие у Вас имеются конкуренты?
+                    .include__item 
+                        .include__header Ценовой сегмент
+                        .include__text Какой ценовой сегмент у Ваших товаров/услуг?
+  when 'landing'
+    .include.include--landing
+        .include__container.container
+            h2.include__title.title-4 Для кого подойдет одностраничный сайт?
+            .include__cover
+                .include__items
+                    .include__item 
+                        .include__header Кто хочет презентовать свой товар
+                        .include__txt Для лучшей продажи товара/услуги очень часто создаются лендинги. На эту посадочную страницу направляются лиды из рекламы, она же анонсируется при запуске маркетинговой кампании, и пользователь уже не отвлекается на ненужные ему в момент покупки вещи.
+                    .include__item 
+                        .include__header Кто хочет протестировать торговое предложение
+                        .include__txt Тестирование — основа качественных продаж и оптимизации вашего ресурса. Для таких целей идеально подходят лендинги: перенаправьте часть пользователей на тестовую страницу, чтобы определить лучший вариант.
+                    .include__item 
+                        .include__header Кто хочет анонсировать мероприятие
+                        .include__txt Для анонса мероприятий, таких как праздники, семинары, презентации, лучше всего подходят лендинги, даже если у Вас есть рабочий сайт. Это шанс отследить Ваших пользователей на конкретном канале, собрать больше людей и не перегружать площадку для продаж анонсами.
+                    .include__item 
+                        .include__header Кто хочет собрать контакты пользователей
+                        .include__txt Рано или поздно Ваш бизнес может столкнуться с проблемой нехватки имеющейся базы пользователей. Как собирать контакты потенциальных клиентов? С помощью лендинга, на котором присутствуют формы обратной связи.
+  when 'vacancy'
+    .include.include--vacancy
+        .include__container.container
+            h2.include__title.title-3 Плюшки, которые тебя ждут
+            .include__cover
+                .include__items
+                    .include__item 
+                        .include__pic(style="background-image: url(./img/icon/set-job.svg)")
+                        .include__right
+                            .include__header Различные проекты
+                            .include__txt Работаем с крупным и малым бизнесом из самых разных отраслей.
+                    .include__item 
+                        .include__pic(style="background-image: url(./img/icon/set-job.svg)")
+                        .include__right
+                            .include__header полная занятость 
+                            .include__txt Рабочий день с понедельника по пятницу с 9:00-18:00.
+                    .include__item 
+                        .include__pic(style="background-image: url(./img/icon/set-job.svg)")
+                        .include__right
+                            .include__header Различные проекты
+                            .include__txt Работаем с крупным и малым бизнесом из самых разных отраслей.
+                    .include__item 
+                        .include__pic(style="background-image: url(./img/icon/set-job.svg)")
+                        .include__right
+                            .include__header Различные проекты
+                            .include__txt Работаем с крупным и малым бизнесом из самых разных отраслей.
+                    .include__item 
+                        .include__pic(style="background-image: url(./img/icon/set-job.svg)")
+                        .include__right
+                            .include__header Различные проекты
+                            .include__txt Работаем с крупным и малым бизнесом из самых разных отраслей.
+                    .include__item 
+                        .include__pic(style="background-image: url(./img/icon/set-job.svg)")
+                        .include__right
+                            .include__header Различные проекты
+                            .include__txt Работаем с крупным и малым бизнесом из самых разных отраслей.
+  when 'promotion'
+    .include.include--promotion
+        .include__container.container
+            h2.include__title.title-4 Этапы работ продвижения
+            .include__cover
+                .include__items
+                    .include__item
+                        .include__header <span class="include__num">1</span> АНАЛИЗ САЙТА И КОНКУРЕНТОВ
+                        .include__text Оцениваем ситуацию. Смотрим, какие стратегии продвижения используют ваши конкуренты. Отмечаем, что можно перенять у успешных сайтов, которые уже в ТОПе.
+                    .include__item
+                        .include__header <span class="include__num">2</span> РУЧНОЙ СБОР СЕМАНТИЧЕСКОГО ЯДРА
+                        .include__text Кропотливо вручную собираем запросы, по которым целесообразно продвигать ваш сайт. В отбор идут только те запросы, которые приведут на сайт потенциальных клиентов.
+                    .include__item
+                        .include__header <span class="include__num">3</span> ПЛАНИРОВАНИЕ ОПТИМИЗАЦИИ САЙТА
+                        .include__text Проводим технический аудит, выявляем уязвимые места сайта, находим ошибки, проблемы. Составляем план работ на несколько месяцев.
+                    .include__item
+                        .include__header <span class="include__num">4</span> ГЛУБОКАЯ ВНУТРЕННЯЯ ОПТИМИЗАЦИЯ
+                        .include__text Осуществляем переработку сайта. Проводим его техническую оптимизацию, изменяем содержимое сайта. При необходимости меняем структуру разделов/подразделов.
+                    .include__item
+                        .include__header <span class="include__num">5</span> ВНЕШНЯЯ ОПТИМИЗАЦИЯ
+                        .include__text Каждый месяц наши копирайтеры пишут уникальные и интересные статьи про вашу деятельность, которые размещаются на сторонних проверенных сайтах.
+                    .include__item
+                        .include__header <span class="include__num">6</span> АНАЛИТИКА, ОТЧЁТНОСТЬ
+                        .include__text Ежемесячно анализируем позиции в поисковых системах, а также трафик и поведение пользователей на вашем сайте. Предоставляем отчёты о нашей работе, формируем дальнейшие рекомендации.
+  when 'app'
+    .include.include--app
+        .include__container.container
+            h2.include__title.title-3 Этапы создания
+            .include__wrapper
+                .include__header 
+                    .include__btn.mf-active
+                        .include__num.link 1
+                        .include__txt планирование и оценка
+                    .include__btn
+                        .include__num.link 2
+                        .include__txt Аналитика
+                    .include__btn
+                        .include__num.link 3
+                        .include__txt Дизайн приложения
+                    .include__btn
+                        .include__num.link 4
+                        .include__txt Разработка
+                    .include__btn
+                        .include__num.link 5
+                        .include__txt тестирование
+                    .include__btn
+                        .include__num.link 6
+                        .include__txt релиз приложения
+                .include__box 
+                    .include__item.mf-show
+                        .include__article планирование и оценка
+                        .include__bloc
+                            .include__left 
+                                .include__info Первый вопрос, который интересует клиента: “Сколько это будет стоить?”. Следующий за ним: “Когда будет готово мобильное приложение?”. Чтобы ответить на оба вопроса, наше агентство проводит оценку и составляет план работ. На этом этапе к проекту обычно присоединяется менеджер проекта. Он может выступать со стороны заказчика или со стороны команды разработчиков. Задачи менеджера проекта: координировать работу команды и общаться с заказчиком.
+                            .include__right
+                                .include__info Но что же означает загадочное слово “оценка”? На этом этапе мы изучаем техническую документацию. Рассчитываем, сколько времени потребуется на разработку и тестирование. Выявляем не описанные сценарии и узкие места в ТЗ.
+                    .include__item
+                        .include__article 2
+                        .include__bloc
+                            .include__left 
+                                .include__info Первый вопрос, который интересует клиента: “Сколько это будет стоить?”.
+                            .include__right
+                                .include__info Но что же означает загадочное слово “оценка”? На этом этапе мы изучаем техническую документацию. Рассчитываем, сколько времени потребуется на разработку и тестирование.
+                    .include__item
+                        .include__article 3
+                        .include__bloc
+                            .include__left 
+                                .include__info Первый вопрос, который интересует клиента: “Сколько это будет стоить?”. Следующий за ним: “Когда будет готово мобильное приложение?”. Чтобы ответить на оба вопроса, наше агентство проводит оценку и составляет план работ. На этом этапе к проекту обычно присоединяется менеджер проекта. Он может выступать со стороны заказчика или со стороны команды разработчиков. Задачи менеджера проекта: координировать работу команды и общаться с заказчиком.
+                            .include__right
+                                .include__info Но что же означает загадочное слово “оценка”? На этом этапе мы изучаем техническую документацию. Рассчитываем, сколько времени потребуется на разработку и тестирование. Выявляем не описанные сценарии и узкие места в ТЗ.
+                    .include__item
+                        .include__article 4
+                        .include__bloc
+                            .include__left 
+                                .include__info Первый вопрос, который интересует клиента: “Сколько это будет стоить?”. Следующий за ним: “Когда будет готово мобильное приложение?”. Чтобы ответить на оба вопроса, наше агентство проводит оценку и составляет план работ. На этом этапе к проекту обычно присоединяется менеджер проекта. Он может выступать со стороны заказчика или со стороны команды разработчиков. Задачи менеджера проекта: координировать работу команды и общаться с заказчиком.
+                            .include__right
+                                .include__info Но что же означает загадочное слово “оценка”? На этом этапе мы изучаем техническую документацию. Рассчитываем, сколько времени потребуется на разработку и тестирование. Выявляем не описанные сценарии и узкие места в ТЗ.
+                    .include__item
+                        .include__article 5
+                        .include__bloc
+                            .include__left 
+                                .include__info Первый вопрос, который интересует клиента: “Сколько это будет стоить?”. Следующий за ним: “Когда будет готово мобильное приложение?”. Чтобы ответить на оба вопроса, наше агентство проводит оценку и составляет план работ. На этом этапе к проекту обычно присоединяется менеджер проекта. Он может выступать со стороны заказчика или со стороны команды разработчиков. Задачи менеджера проекта: координировать работу команды и общаться с заказчиком.
+                            .include__right
+                                .include__info Но что же означает загадочное слово “оценка”? На этом этапе мы изучаем техническую документацию. Рассчитываем, сколько времени потребуется на разработку и тестирование. Выявляем не описанные сценарии и узкие места в ТЗ.
+                    .include__item
+                        .include__article 6
+                        .include__bloc
+                            .include__left 
+                                .include__info Первый вопрос, который интересует клиента: “Сколько это будет стоить?”. Следующий за ним: “Когда будет готово мобильное приложение?”. Чтобы ответить на оба вопроса, наше агентство проводит оценку и составляет план работ. На этом этапе к проекту обычно присоединяется менеджер проекта. Он может выступать со стороны заказчика или со стороны команды разработчиков. Задачи менеджера проекта: координировать работу команды и общаться с заказчиком.
+                            .include__right
+                                .include__info Но что же означает загадочное слово “оценка”? На этом этапе мы изучаем техническую документацию. Рассчитываем, сколько времени потребуется на разработку и тестирование. Выявляем не описанные сценарии и узкие места в ТЗ.
+  when 'magazine'
+    .include.include--magazine
+        - var quote = 'h4';
+        - var quoteTitle = 'Секреты создания проектов';
+        - var quoteInfo = ['Мы разрабатываем не просто сайты, а готовые отлаженные системы. Одним из главных секретов нашей команды является умение постановки правильных целей и их качественная реализация. Но это не единственный серкет:'];
+
+        include ./quote
+        .include__container.container
+            .include__cover 
+                .include__items 
+                    .include__item 
+                        .include__left
+                            .include__pic(style="background-image: url(./img/icon/set-secrets.svg)")
+                        .include__right
+                            .include__header Личный менеджер
+                            .include__txt Каждый проект проходит через нашего менеджера. Он всегда на связи с заказчиков и также заинтересован в запуске качественного сайта.
+                    .include__item 
+                        .include__left
+                            .include__pic(style="background-image: url(./img/icon/set-secrets.svg)")
+                        .include__right
+                            .include__header Прозрачность разработки
+                            .include__txt Абсолютно все задачи мы координируем в корпоративной системе Битрикс24, которая помогает нам следить за процессом и соблюдать все сроки.
+                    .include__item 
+                        .include__left
+                            .include__pic(style="background-image: url(./img/icon/set-secrets.svg)")
+                        .include__right
+                            .include__header Системная работа
+                            .include__txt Только комплексный подход выдает наилучший результат. Наша компания всегда поддерживает отлаженный процесс.
+                    .include__item 
+                        .include__left
+                            .include__pic(style="background-image: url(./img/icon/set-secrets.svg)")
+                        .include__right
+                            .include__header точная аналитика
+                            .include__txt Для привленечяия большего потока клиентов в Ваш бизнес, мы анализируем и измеряем эффективность сайта.
+  when 'call'
+    .include.include--transparent.include--call
+        .include__container.container
+            .include__note мы поможем
+            h2.include__title.title-3 Хотите свой интернет-магазин? Запишитесь&nbsp;на&nbsp;басплатную&nbsp;консультацию!
+            a(href="#").btn.btn--special.link
+                    .btn__special
+                        span Оставить заявку
+                    .btn__text Оставить заявку
+    

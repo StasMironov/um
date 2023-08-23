@@ -1,0 +1,20 @@
+.chart {
+    margin-top: 85px;
+
+    @media(max-width: 1024px) {
+        margin-top: 0;
+    }
+
+    &__img {
+        margin-top: 47px;
+        width: 100%;
+
+        @media(max-width: 1024px) {
+            margin-top: 40px;
+        }
+    }
+
+    .quote {
+        margin-top: 0;
+    }
+}

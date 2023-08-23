@@ -1,0 +1,152 @@
+.accordion {
+    margin-top: 75px;
+
+    @media(max-width: 1024px) {
+        margin-top: 56px;
+    }
+
+    @media(max-width: 620px) {
+        margin-top: 44px;
+    }
+
+    &__panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 142%;
+        color: #2d2d2d;
+        padding: 29px 22px 16px 22px;
+        background-color: white;
+        cursor: pointer;
+        transition: .4s ease-in-out;
+
+        @media(max-width: 1024px) {
+            line-height: 142%;
+            padding: 10px 16px 12px;
+            padding-right: 5px;
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        @media(max-width: 620px) {
+            padding: 10px 12px 12px 9px;
+        }
+    }
+
+    &__list {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 25px;
+        padding: 0 22px;
+        max-height: 0;
+        overflow: hidden;
+        transition: .4s ease-in-out;
+        background-color: #fff;
+
+        @media(max-width: 1024px) {
+            padding: 0px 16px;
+        }
+    }
+
+    &__content {
+        padding: 0px 0 22px;
+
+        & ol {
+            list-style-type: none;
+            counter-reset: num;
+        }
+
+        & ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        & p {
+            line-height: 22px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: #2d2d2d;
+        font-weight: 700;
+        margin-right: 35px;
+
+        @media(max-width: 620px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__pic {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-image: url('../img/icon/plus.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        outline: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 20px;
+
+        @media(max-width: 620px) {
+            width: 10px;
+            min-width: 10px;
+            max-width: 10px;
+            height: 10px;
+            background-size: contain;
+        }
+    }
+
+    &__title {
+        text-align: center;
+
+        @media(max-width: 620px) {
+            text-align: left;
+            line-height: 29px;
+        }
+    }
+
+    &__items {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    &__cover {
+        margin-top: 32px;
+    }
+
+    &__item {
+        &:not(:first-child) {
+            @media(max-width: 1024px) {
+                margin-top: 23px;
+            }
+
+            @media(max-width: 620px) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .is-open {
+        background-color: $ochre;
+
+        &+.accordion__list {
+            background-color: $ochre;
+        }
+
+        .accordion__pic--active {
+            background-image: url('../img/icon/minus.svg');
+        }
+    }
+}

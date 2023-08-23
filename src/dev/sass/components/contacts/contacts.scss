@@ -1,0 +1,230 @@
+.contacts {
+    margin-top: 65px;
+
+    @media(max-width: 620px) {
+        margin-top: 30px;
+    }
+
+    &__pic {
+        display: inline-flex;
+        width: 6px;
+        height: 4px;
+        margin-left: 4px;
+        transform: scale(1, -1);
+        transform-origin: center;
+        transition: .4s ease-in-out;
+
+        &--active {
+            transform: none;
+            margin-top: 2px;
+        }
+
+        path {
+            fill: $grey-15;
+            transition: .4s ease-in-out;
+        }
+    }
+
+    &__right {
+
+        @media(max-width: 620px) {
+            margin-top: 30px;
+        }
+    }
+
+    &__panel {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        cursor: pointer;
+        transition: .4s ease-in-out;
+    }
+
+    &__list {
+        font-size: 14px;
+        line-height: 25px;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s ease-in-out;
+        background-color: #fff;
+
+        &.is-open {
+            max-height: 100vh;
+        }
+    }
+
+    &__grid {
+        width: 100%;
+        display: flex;
+        opacity: 0;
+        transition: .3s;
+
+        @media(max-width: 620px) {
+            flex-direction: column;
+        }
+    }
+
+    &__article {
+        font-size: 14px;
+        line-height: 2;
+        color: $grey-15;
+
+        @media(max-width: 620px) {
+            color: $black;
+        }
+
+        &--name {
+
+            @media(max-width: 620px) {
+                display: none;
+            }
+        }
+    }
+
+    &__bloc {
+        margin-top: 18px;
+
+        @media(max-width: 620px) {
+            margin-top: 7px;
+        }
+    }
+
+    &__txt {
+        margin-top: 6px;
+        font-size: 18px;
+        line-height: 1.17;
+
+        @media(max-width: 620px) {
+            margin-top: 3px;
+            font-size: 16px;
+            line-height: 1.31;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        margin-top: 4px;
+        font-size: 18px;
+        line-height: 1.17;
+
+        @media(max-width: 620px) {
+            margin-top: 0;
+            font-size: 16px;
+            line-height: 1.31;
+        }
+
+        &:hover {
+            color: $red-2;
+        }
+    }
+
+    &__unit {
+        &:not(:first-child) {
+            margin-top: 20px;
+
+            @media(max-width: 620px) {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &__header {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 500;
+
+        @media(max-width: 620px) {
+            font-size: 16px;
+        }
+    }
+
+    &__info {
+        margin-top: 70px;
+
+        @media(max-width: 620px) {
+            margin-top: 40px;
+        }
+    }
+
+    &__cover {
+        margin-top: 20px;
+
+        @media(max-width: 620px) {
+            margin-top: 10px;
+        }
+    }
+
+    &__word {
+        @media(max-width: 620px) {
+            line-height: 25px;
+        }
+
+        &:not(:first-child) {
+            margin-top: 7px;
+
+            @media(max-width: 620px) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__item {
+
+        &:not(:first-child) {
+            margin-top: 42px;
+
+            @media(max-width: 620px) {
+                margin-top: 26px;
+            }
+        }
+
+        &--main {
+
+            .contacts {
+
+                &__list {
+                    max-height: none;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+
+    &__left {
+        width: 40%;
+        max-width: 400px;
+        margin-right: 80px;
+        flex-shrink: 0;
+
+        @media(max-width: 1024px) {
+            width: 45%;
+            margin-right: 40px;
+        }
+
+        @media(max-width: 768px) {
+            margin-right: 20px;
+        }
+
+        @media(max-width: 620px) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 2;
+        color: $grey-15;
+
+        @media(max-width: 620px) {
+            margin-right: 5px;
+            transition: .4s ease-in-out;
+        }
+    }
+
+    &+.place {
+        @media(max-width: 620px) {
+            margin-top: 71px;
+        }
+    }
+}

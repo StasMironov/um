@@ -1,0 +1,612 @@
+extends ../layout/main
+
+block variables
+	- var pageClass = 'index-page';
+	- var setTitle = 'Мы разрабатываем и продвигаем веб-сайты для всех сфер бизнеса';
+	- var include = 'btn';
+	
+	- var bildboard_include = 'special-btn'
+	- var bildboardImg = ['img/dataBild/img1.jpg', 'img/dataBild/img_tablet1.jpg', 'img/dataBild/img_mobile1.jpg'];
+	- var includeBloc = 'promotion';
+	- var request = 'audit';
+	- var quoteInfo = ['Мы не просто продвигаем сайт в топ поисковой выдачи, а делаем из него канал привлечения заказов. Десятки наших клиентов в Магнитогорске и в других городах России успешно решают свои бизнес-Задачи с помощью SEO-продвижения. Гарантируем соблюдение всех требований Яндекс и Google. ', 'Наша компания привлекает в Ваш бизнес новых клиентов из поисковых и социальных систем, а также повышает узнаваемость бренда. Именно поэтому сайт выходит на первые места в поиске, реклама дает заказы, вашу компанию начинают узнавать, а ваш бизнес получает прибыль!'];
+	- var quote = 'h2';
+	- var quoteTitle = 'Выводим сайт в ТОП';
+
+
+block content
+	div(data-barba="container" data-barba-namespace="page")
+		.bildboard-data.bildboard-data--special-btn.bildboard-data--left 
+			<picture>
+				<source srcset=#{bildboardImg[0]} media="(min-width: 1025px)">
+				<source media="(min-width: 621px)" srcset=#{bildboardImg[1]}>
+				<source media="(min-width: 320px)" srcset=#{bildboardImg[2]}>
+				<img src=#{bildboardImg[0]} alt="MDN">
+			</picture>
+			.bildboard-data__container.container
+				h1.bildboard-data__title.title-1 #{setTitle}
+				.bildboard-data__quote Наше агентство не просто продвигает сайт в топ поисковой выдачи, а делает из него канал привлечения заказов. Десятки наших клиентов в Магнитогорске и в других городах России успешно решают свои бизнес-задачи с помощью SEO-продвижения. Гарантируем соблюдение всех требований Яндекс и Google.
+				a(href="#request").btn.btn--special
+					.btn__special
+						span Отправить заявку менеджеру
+					.btn__text Отправить заявку менеджеру
+		include ../modules/breadcrumbs
+		include ../modules/quote
+		include ../modules/include
+
+		.rate
+			.rate__container.container
+				h2.rate__title.title-4 Стоимость продвижения сайтов в Магнитогорске
+				.rate__info Мы собрали самые эффективные инструменты продвижения вашего бизнеса в интернете и сделали его дешевле!
+				.rate__mf
+					.swiper-container.rate__items.js-rate
+						.swiper-wrapper
+							.swiper-slide.rate__item
+								.rate__cover
+									.rate__top Базовый
+									.rate__content
+										.rate__article Время продвижения: 1 месяц
+										.rate__list
+											.rate__link Аудит сайта и рекомендации;
+											.rate__link Повышение скорости загрузки сайта;
+											.rate__link Изменение разметки сайта (добавление атрибутов семантической разметки страниц);
+											.rate__link Автоматическое заполнение мета-полей;
+											.rate__link Создание и редактирование мета-полей; 
+											.rate__link Оптимизация страниц по итогам месячного анализа (изменение ключевых слов, добавление запросов);
+											.rate__link Техническая поддержка.
+											
+										.rate__select
+											.rate__p Дополнительные услуги к пакету:
+											.rate__box
+												<input type="checkbox" data-for="check3" class="switch" id="checkbox" value="1" />
+												<label for="checkbox">Контекстная реклама</label>
+											.rate__box
+												<input type="checkbox" data-for="check2" class="switch" id="checkbox2" />
+												<label for="checkbox2">SMM</label>
+								.rate__bottom
+									.rate__grid
+										.rate__left
+											.rate__txt Стоимость без услуг:
+											.rate__number 38 400₽
+										.rate__right
+											.rate__txt Стоимость с услугами:
+											.rate__number 26 880₽
+							.swiper-slide.rate__item
+								.rate__cover
+									.rate__top Продвижение +
+									.rate__content
+										.rate__article Время продвижения: 3 месяца
+										.rate__list
+											.rate__link Создание семанического ядра;
+											.rate__link Написание текстов для SEO страниц 10 -20;
+											.rate__link Отчетность по завершению работы;
+											.rate__link SEO: 30-70 запросов;
+											.rate__link SEO: 1 регион;
+											.rate__link Внутренняя перелинковка страниц сайта;
+											.rate__link Модернизация сайта, 8 часов программиста;
+											.rate__link Написание статей для НЧ запросов 4-6;
+											.rate__link Техническая поддержка.
+											
+										.rate__select
+											.rate__p Дополнительные услуги к пакету:
+											.rate__box
+												<input type="checkbox" data-for="check3" class="switch" id="checkbox3" />
+												<label for="checkbox3">Контекстная реклама</label>
+											.rate__box
+												<input type="checkbox" data-for="check2" class="switch" id="checkbox4" />
+												<label for="checkbox4">SMM</label>
+								.rate__bottom
+									.rate__grid
+										.rate__left
+											.rate__txt Стоимость без услуг:
+											.rate__number 48 000₽
+										.rate__right
+											.rate__txt Стоимость с услугами:
+											.rate__number 38 400₽
+							.swiper-slide.rate__item
+								.rate__cover
+									.rate__top Продвинутый
+									.rate__content
+										.rate__article Время продвижения: 6 месяцев
+										.rate__list
+											.rate__link Создание семанического ядра;
+											.rate__link Написание текстов для SEO страниц 10 -20;
+											.rate__link Отчетность по завершению работы;
+											.rate__link SEO: 70-100 запросов;
+											.rate__link SEO: 1 регион;
+											.rate__link Внутренняя перелинковка страниц сайта;
+											.rate__link Модернизация сайта, 16 часов программиста;
+											.rate__link Написание статей для НЧ запросов 10-20;
+											.rate__link Техническая поддержка.
+											
+										.rate__select
+											.rate__p Дополнительные услуги к пакету:
+											.rate__box
+												<input type="checkbox" data-for="check3" class="switch" id="checkbox5" />
+												<label for="checkbox5">Контекстная реклама</label>
+											.rate__box
+												<input type="checkbox" data-for="check2" class="switch" id="checkbox6" />
+												<label for="checkbox6">SMM</label>
+								.rate__bottom
+									.rate__grid
+										.rate__left
+											.rate__txt Стоимость без услуг:
+											.rate__number 116 000 ₽
+										.rate__right
+											.rate__txt Стоимость с услугами:
+											.rate__number 92 800₽
+						.pagination
+		.promotion-works(style="background-image: url(img/pic.jpg);")
+			.promotion-works__container.container
+				.promotion-works__grid
+					.swiper-container.promotion-slider.promotion-slider--chart.js-graph-slider
+						.swiper-wrapper
+							.swiper-slide
+								.promotion-slider__grid
+									.promotion-slider__left
+										.promotion-slider__title Графики
+										.promotion-slider__cover
+											svg(id="chart")
+									.promotion-slider__right
+										.promotion-slider__header Рекламный бюджет
+										.promotion-slider__items
+											.promotion-slider__item.promotion-slider__item--last
+												.promotion-slider__num 22k
+												.promotion-slider__info -0,75% из бюджета в прошлом месяце
+											.promotion-slider__item.promotion-slider__item--today
+												.promotion-slider__num +12,5%
+												.promotion-slider__info +0,75% за последний месяц
+							.swiper-slide
+								.promotion-slider__grid
+									.promotion-slider__left
+										.promotion-slider__title Графики 2
+										.promotion-slider__cover
+											svg(id="chart")
+									.promotion-slider__right
+										.promotion-slider__header Рекламный бюджет
+										.promotion-slider__items
+											.promotion-slider__item.promotion-slider__item--last
+												.promotion-slider__num 22k
+												.promotion-slider__info -0,75% из бюджета в прошлом месяце
+											.promotion-slider__item.promotion-slider__item--today
+												.promotion-slider__num +12,5%
+												.promotion-slider__info +0,75% за последний месяц
+					.promotion-slider.promotion-slider--info.js-info-slider
+						.swiper-wrapper
+							.swiper-slide
+								.promotion-slider__header Наши работы
+								.promotion-slider__wrap
+									.promotion-slider__bloc
+										.promotion-slider__section
+											.promotion-slider__unit
+												.promotion-slider__char Клиент:
+												.promotion-slider__txt Uralmedias
+											.promotion-slider__unit
+												.promotion-slider__char Тематика:
+												.promotion-slider__txt Веб-разработка
+										.promotion-slider__section
+											.promotion-slider__unit
+												.promotion-slider__char Тип продвижения:
+												.promotion-slider__txt SEO
+											.promotion-slider__unit
+												.promotion-slider__char Тип сайта:
+												.promotion-slider__txt Корпоративный
+									.promotion-slider__section.promotion-slider__section--text
+										.promotion-slider__unit
+											.promotion-slider__char Результат:
+											.promotion-slider__txt Выстроили performance-стратегию и работали со всей воронкой продаж. За три месяца ведения рекламной кампании увеличили объем транзакций на 65% и снизили стоимость лида на 20%.
+							.swiper-slide
+								.promotion-slider__header Наши работы 2
+								.promotion-slider__wrap
+									.promotion-slider__bloc
+										.promotion-slider__section
+											.promotion-slider__unit
+												.promotion-slider__char Клиент:
+												.promotion-slider__txt Uralmedias
+											.promotion-slider__unit
+												.promotion-slider__char Тематика:
+												.promotion-slider__txt Веб-разработка
+										.promotion-slider__section
+											.promotion-slider__unit
+												.promotion-slider__char Тип продвижения:
+												.promotion-slider__txt SEO
+											.promotion-slider__unit
+												.promotion-slider__char Тип сайта:
+												.promotion-slider__txt Корпоративный
+									.promotion-slider__section.promotion-slider__section--text
+										.promotion-slider__unit
+											.promotion-slider__char Результат:
+											.promotion-slider__txt Выстроили performance-стратегию и работали со всей воронкой продаж. За три месяца ведения рекламной кампании увеличили объем транзакций на 65% и снизили стоимость лида на 20%.
+						.promotion-slider__func
+							.pagination
+							.arrow
+								.arrow__link.arrow__link--prev
+									+svg('arr-slider')
+								.arrow__link.arrow__link--next
+									+svg('arr-slider')
+		.calling
+			.calling__container.container
+				.calling
+		include ../modules/request
+		.table
+			.table__container.container
+				.table__inner
+					table
+						tr.table__header
+							th Название программы
+							th Базовый
+							th Продвижение+
+							th Продвинутый
+						tr.table__colaps
+							td(colspan = "4") Подготовительные работы
+						tr
+							td Проверка на санкции
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Проверка на аффилиаты
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Проверка на вирусы
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Регистрация в справочнике поисковой системы
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Регистрация в сервисе для вебмастеров
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Регистрация счетчиков посещаемости
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Настройка целей
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Отчет
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr.table__colaps
+							td(colspan = "4") Оптимизация CMS
+						tr
+							td Настройка файлов .htacess
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Настройка файлов robots.txt
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Настройка ЧПУ (SEF)
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Обновление CMS
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr.table__colaps
+							td(colspan = "4") Оптимизация HTML
+						tr
+							td Проверка на валидность
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Проверка на наличие метатегов
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Проверка на наличие фавикона
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Проверка на кроссбраузерность
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Проверка на адаптивность
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr.table__colaps
+							td(colspan = "4") Оптимизация  контента
+						tr
+							td Группировка (кластеризация) запросов
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Определение целевых страниц
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Проверка на уникальность
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Проверка на достаточность контента
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Написание текстов
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Поисковая оптимизация
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Удаление дублей страниц
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Создание карты сайта sitemap.xml
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr.table__colaps
+							td(colspan = "4") Контекстная реклама
+						tr
+							td Прогноз бюджета
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Анализ конкурентов
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Составление обявлений
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Настройка показов
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Ведение рекламной кампании
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Анализ эффективности
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Оптимизация контекстной рекламы
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr.table__colaps
+							td(colspan = "4") SMM
+						tr
+							td Оформление группы
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Настройка рекламы
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Постинг
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+						tr
+							td Отчет
+							td
+							td
+								+svg("ok")
+							td
+								+svg("ok")
+
+		include ../modules/accordion
+		#request.call.call--special
+			.call__container.container
+				.call__grid
+					.call__left
+						.call__top
+							h2.call__title.title-4 Оставьте заявку
+							.call__txt на <span>бесплатный</span> аудит сайта
+						.call__bottom
+							.call__img
+								img(src="img/team/p6.png" alt="")
+							.call__name Елизавета
+							.call__status Менеджер компании
+					.call__right
+						form.call__form.call__form--grid
+							.form-group.form-group--name
+								.form-group__label Ваше имя
+								input(type="text" placeholder="Введите имя").form-group__input
+							.form-group.form-group--phone
+								.form-group__label Ваш телефон или e-mail
+								input(type="tel" placeholder="+7 (___) ___-__-__").form-group__input.js-phone-mask
+							.form-group.form-group--adres
+								.form-group__label Адрес сайта
+								input(type="text" placeholder="Email").form-group__input
+							.form-group.form-group--comment
+								.form-group__label Что нам стоит знать?
+								textarea(placeholder="Дополнительная информация").form-group__input
+							.form-group.form-group--service
+								.selection
+									.selection__title Дополнительные услуги
+									.selection__list
+										label(for="check-1").checkbox
+											input(id="check-1" type="checkbox" name="check" value="1").checkbox__input
+											.checkbox__label Оптимизация сайта (SEO)
+										label(for="check-2").checkbox
+											input(id="check-2" type="checkbox" name="check" value="2").checkbox__input
+											.checkbox__label Разовая отимизация
+										label(for="check-3").checkbox
+											input(id="check-3" type="checkbox" name="check" value="3").checkbox__input
+											.checkbox__label Бесплатная консультация
+										label(for="check-4").checkbox
+											input(id="check-4" type="checkbox" name="check" value="4").checkbox__input
+											.checkbox__label Аудит сайта
+										label(for="check-5").checkbox
+											input(id="check-5" type="checkbox" name="check" value="5").checkbox__input
+											.checkbox__label SEO-оптимизация
+										label(for="check-6").checkbox
+											input(id="check-6" type="checkbox" name="check" value="6").checkbox__input
+											.checkbox__label Сопровождение разработки
+							.form-group.form-group--request
+								button(type="submit").btn.btn--special
+									.btn__special
+										span Отправить заявку
+									.btn__text Отправить заявку
+								.call__quote Нажимая кнопку “Заказать проект”, вы принимаете условия <a href="javascript:void(0);">пользовательского соглашения</a>
+
+
+
+						//- 	.call__bloc
+						//- 		.form-group
+						//- 			.form-group__label Какая услуга Вас интересует?
+						//- 			input(type="text" placeholder="Веб").form-group__input
+						//- 		.form-group
+						//- 			.form-group__label Ваше имя
+						//- 			input(type="text" placeholder="Введите имя").form-group__input
+						//- 		.form-group
+						//- 			.form-group__label Контактный телефон
+						//- 			input(type="tel" placeholder="+7 (___) ___-__-__").form-group__input.js-phone-mask
+						//- 		.form-group
+						//- 			.form-group__label Ваша почта
+						//- 			input(type="text" placeholder="Email").form-group__input
+						//- 	.form-group
+						//- 		.form-group__label Комментарий
+						//- 		textarea(rows="3" placeholder="Дополнительная информация").form-group__input
+
+						//- a(href="#").btn.btn--special
+						//- 	.btn__special
+						//- 		span Отправить заявку
+						//- 	.btn__text Отправить заявку
+						//- .call__quote Нажимая кнопку “Заказать проект”, вы принимаете условия <a href="javascript:void(0);">пользовательского соглашения</a>
+		
+
+block script

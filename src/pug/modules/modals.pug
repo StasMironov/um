@@ -1,0 +1,39 @@
+.request-popup.js-form-request
+    .request-popup__inner
+        .request-popup__close.js-close-form
+        .request-popup__left
+            .request-popup__title Время покорять новые вершины!
+            form.request-popup__form
+                .form-group.select
+                    <select class="js-example-basic-single" name="state">
+                    <option value="LEND">Лендинг</option>
+                    <option value="CORP">Корпоративный сайт</option>
+                    <option value="SHOP">Интернет-магазин</option>
+                    <option value="APP">Мобильное приложение</option>
+                    <option value="SEO">SEO-оптимизация</option>
+                    <option value="PROM">Продвижение</option>
+                    <option value="ADVERT">Реклама</option>
+                    </select>
+                .form-group
+                    input.form-group__input(type="text" placeholder="Ваше имя")
+                .form-group
+                    input.form-group__input(type="tel" placeholder="Ваш телефон").js-phone-mask
+                button(type="submit").btn.btn--special.link.js-btn-grace
+                    .btn__special
+                        span Заказать проект
+                    .btn__text Заказать проект
+            .request-popup__quote Нажимая кнопку “Заказать проект”, вы принимаете условия <a href="javascript:void(0);">пользовательского соглашения</a>
+        .request-popup__right(style="background-image: url(img/bg.jpg)")
+
+.grace-popup.js-form-grace
+    .grace-popup__inner
+        .request-popup__close.js-close-form
+        .grace-popup__pic
+            +svg('heart')
+        .grace-popup__title Ваше сообщение отправлено!
+        .grace-popup__quote В ближайшее время наш менеджер свяжется с Вами.
+        .link.link--detail.js-close-form закрыть
+
+
+
+

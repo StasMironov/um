@@ -1,0 +1,62 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+	- var setTitle = 'Разработка лендингов и посадочных страниц';
+	//- - var quote = 'landing';
+
+	- var quote = 'h2';
+	- var quoteTitle = 'Что такое лендинг?';
+	- var quoteInfo = ['Лендинг (landing page), одностраничный сайт — веб-страница, основной задачей которой является сбор контактных данных целевой аудитории. Обычно она посвящена продаже одной услуги или продукта. Цель любого лендинга — перевести клиента на следующий этап воронки продаж.'];
+
+	- var bildboard_img = "background-image: url(img/dataBild/img9.jpg);";
+	- var includeBloc = 'landing';
+	- var include = "landing";
+	- var bildboardImg = ['img/dataBild/img1.jpg', 'img/dataBild/img_tablet1.jpg', 'img/dataBild/img_mobile1.jpg'];
+	- var bildboard_include = 'special';
+	- var priceList = '2'; 
+	- var priceBg = 'background-color: #f6f6f6';
+
+block content
+	div(data-barba="container" data-barba-namespace="page")
+		include ../modules/bildboard
+		include ../modules/breadcrumbs
+		include ../modules/quote
+		include ../modules/price
+		.landing-stages
+			.landing-stages__container.container
+				h2.landing-stages__title.title-4 Этапы разработки
+				.landing-stages__cover
+					.landing-stages__items
+						.landing-stages__item 
+							.landing-stages__num 1
+							.landing-stages__bottom
+								.landing-stages__header агрегация требований
+								.landing-stages__txt Мы знакомимся с клиентом, проводим тщательный анализ товаров/услуг и подбираем индивидуальное решение задачи.
+						.landing-stages__item 
+							.landing-stages__num 2
+							.landing-stages__bottom
+								.landing-stages__header дизайн
+								.landing-stages__txt Мы знакомимся с клиентом, проводим тщательный анализ товаров/услуг и подбираем индивидуальное решение задачи.
+						.landing-stages__item 
+							.landing-stages__num 3
+							.landing-stages__bottom
+								.landing-stages__header Верстка
+								.landing-stages__txt Мы знакомимся с клиентом, проводим тщательный анализ товаров/услуг и подбираем индивидуальное решение задачи.
+						.landing-stages__item 
+							.landing-stages__num 4
+							.landing-stages__bottom
+								.landing-stages__header Сборка
+								.landing-stages__txt Мы знакомимся с клиентом, проводим тщательный анализ товаров/услуг и подбираем индивидуальное решение задачи.
+		include ../modules/include
+		.seo-slider.seo-slider--landing
+				- var quote = 'h4';
+				- var quoteTitle = 'Примеры одностраничных сайтов';
+				- var quoteInfo = ['Мы стараемся удовлетворить абсолютно все требования заказчика и создать сайт, который радует глаз и приносит прибыль.'];
+				include ../modules/quote
+				.container
+					include ../modules/slider
+		include ../modules/accordion
+		include ../modules/call
+block script

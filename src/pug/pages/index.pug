@@ -1,0 +1,270 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+	- var quote = 'h2';
+	- var quoteTitle = 'Проекты';
+	- var quoteInfo = ['Наша компания с 2011 года реализовала более 300 проектов для бизнеса на основе данных и здравого смысла!'];
+
+block content
+	div(data-barba="container" data-barba-namespace="page")
+		.bildboard.bildboard--main
+			.bildboard__container.container
+				h1.bildboard__title.title-1
+					| РАЗРАБОТКА
+					|
+					a.sad-link.link(href="magazine.html")
+						span интернет&nbsp;-
+						|
+						|
+						span магазинов
+					|
+					| и
+					|
+					a.sad-link.link(href="app.html")
+						span мобильных
+						|
+						|
+						span приложений
+				.rating
+					.rating__items
+						a(href="javascript:void(0);").rating__item.link
+							.rating__img
+								img(src="../img/icon/rating-gold.svg" alt="35 МЕСТО")
+							.rating__title 4 МЕСТО
+							.rating__text В рейтинге разработки интернет-магазинов
+							.rating__text.rating__text--mobile Разработка интернет-магазинов
+						a(href="javascript:void(0);").rating__item.link
+							.rating__img
+								img(src="../img/icon/rating-gold.svg" alt="32 МЕСТО")
+							.rating__title 22 МЕСТО
+							.rating__text В рейтинге разработки и&nbsp;продвижения сайтов
+							.rating__text.rating__text--mobile Разработка и&nbsp;продвижениие сайтов
+						a(href="javascript:void(0);").rating__item.link
+							.rating__img
+								img(src="../img/icon/rating-diploma.svg" alt="4 МЕСТО")
+							.rating__title ФИНАЛИСТ
+							.rating__text В номинации «СМИ,&nbsp;издательства»
+							.rating__text.rating__text--mobile В номинации «СМИ, издательства»
+			video(autoplay="true" loop="loop" muted="muted" poster="media/video.mp4" data-parallax="scroll" data-image-src="media/video.mp4" playsinline).bildboard__video
+				<source src="media/video.mp4" type="video/mp4">
+		.fill-background
+			.portfolio.portfolio--main.js-pin-portfolio(data-color="#fff")
+				include ../modules/quote
+				.portfolio__container.container
+					.portfolio__items
+						a(href="javascript:void(0);" data-color="#0E4F95").portfolio__item.with-parallax.link
+							picture
+								source(media="(max-width: 620px)" srcset="img/projects/magmetall-290.jpg")
+								source(media="(max-width: 768px)" srcset="img/projects/magmetall-728.jpg")
+								source(media="(min-width: 769px)" srcset="img/projects/magmetall-1260.jpg")
+								img(src="img/projects/magmetall-1260.jpg" alt="mm" title="mm")
+							.portfolio__grid
+								.portfolio__left
+									h3.portfolio__header.title-3 Магнитогорский металл
+									.portfolio__type Новостной портал
+									.portfolio__content
+										p Господа, современная методология разработки в значительной степени обусловливает важность системы обучения кадров, соответствующей насущным потребностям. Повседневная практика показывает.
+										p Господа, современная методология разработки в значительной степени обусловливает важность такой системы обучения кадров.
+						a(href="javascript:void(0);" data-color="#1E202C").link.portfolio__item.with-parallax
+							picture
+								source(media="(max-width: 620px)" srcset="img/projects/mbf-290.jpg")
+								source(media="(max-width: 768px)" srcset="img/projects/mbf-728.jpg")
+								source(media="(min-width: 769px)" srcset="img/projects/mbf-1260.jpg")
+								img(src="img/projects/mbf-1260.jpg" alt="mbf" title="mbf")
+							.portfolio__grid
+								.portfolio__left
+									h3.portfolio__header.title-3 МБФ
+									.portfolio__type Новостной портал
+									.portfolio__content
+										p Господа, современная методология разработки в значительной степени обусловливает важность системы обучения кадров, соответствующей насущным потребностям. Повседневная практика показывает.
+										p Господа, современная методология разработки в значительной степени обусловливает важность такой системы обучения кадров.
+						a(href="javascript:void(0);" style="background-image: url(img/decor/dec12.png)" data-color="#D73336").link.portfolio__item.with-parallax
+							picture
+								source(media="(max-width: 620px)" srcset="img/projects/roza-vetrov-290.jpg")
+								source(media="(max-width: 768px)" srcset="img/projects/roza-vetrov-728.jpg")
+								source(media="(min-width: 769px)" srcset="img/projects/roza-vetrov-1260.jpg")
+								img(src="img/projects/magmetall-1260.jpg" alt="roza-vetrov" title="roza-vetrov")
+							.portfolio__grid
+								.portfolio__left
+									h3.portfolio__header.title-3 Роза ветров
+									.portfolio__type Новостной портал
+									.portfolio__content
+										p Господа, современная методология разработки в значительной степени обусловливает важность системы обучения кадров, соответствующей насущным потребностям. Повседневная практика показывает.
+										p Господа, современная методология разработки в значительной степени обусловливает важность такой системы обучения кадров.
+						a(href="javascript:void(0);" style="background-image: url(img/decor/dec12.png)" data-color="#9e8a81").link.portfolio__item.with-parallax
+							picture
+								source(media="(max-width: 620px)" srcset="img/projects/pobeda-290.jpg")
+								source(media="(max-width: 768px)" srcset="img/projects/pobeda-728.jpg")
+								source(media="(min-width: 769px)" srcset="img/projects/pobeda-1260.jpg")
+								img(src="img/projects/pobeda-1260.jpg" alt="pobeda" title="pobeda")
+							.portfolio__grid
+								.portfolio__left
+									h3.portfolio__header.title-3 Роза ветров
+									.portfolio__type Новостной портал
+									.portfolio__content
+										p Господа, современная методология разработки в значительной степени обусловливает важность системы обучения кадров, соответствующей насущным потребностям. Повседневная практика показывает.
+										p Господа, современная методология разработки в значительной степени обусловливает важность такой системы обучения кадров.
+						a(href="javascript:void(0);" style="background-image: url(img/decor/dec12.png)" data-color="#34558B").link.portfolio__item.with-parallax
+							picture
+								source(media="(max-width: 620px)" srcset="img/projects/banki-290.jpg")
+								source(media="(max-width: 768px)" srcset="img/projects/banki-728.jpg")
+								source(media="(min-width: 769px)" srcset="img/projects/banki-1260.jpg")
+								img(src="img/projects/banki-1260.jpg" alt="banki" title="banki")
+							.portfolio__grid
+								.portfolio__left
+									h3.portfolio__header.title-3 Роза ветров
+									.portfolio__type Новостной портал
+									.portfolio__content
+										p Господа, современная методология разработки в значительной степени обусловливает важность системы обучения кадров, соответствующей насущным потребностям. Повседневная практика показывает.
+										p Господа, современная методология разработки в значительной степени обусловливает важность такой системы обучения кадров.
+						a(href="javascript:void(0);" style="background-image: url(img/decor/dec12.png)" data-color="#333333").link.portfolio__item.with-parallax
+							picture
+								source(media="(max-width: 620px)" srcset="img/projects/indmach-290.jpg")
+								source(media="(max-width: 768px)" srcset="img/projects/indmach-728.jpg")
+								source(media="(min-width: 769px)" srcset="img/projects/indmach-1260.jpg")
+								img(src="img/projects/indmach-1260.jpg" alt="banki" title="banki")
+							.portfolio__grid
+								.portfolio__left
+									h3.portfolio__header.title-3 Роза ветров
+									.portfolio__type Новостной портал
+									.portfolio__content
+										p Господа, современная методология разработки в значительной степени обусловливает важность системы обучения кадров, соответствующей насущным потребностям. Повседневная практика показывает.
+										p Господа, современная методология разработки в значительной степени обусловливает важность такой системы обучения кадров.
+						a(href="javascript:void(0);" style="background-image: url(img/decor/dec12.png)" data-color="#008B1C").link.portfolio__item.with-parallax
+							picture
+								source(media="(max-width: 620px)" srcset="img/projects/sab-290.jpg")
+								source(media="(max-width: 768px)" srcset="img/projects/sab-728.jpg")
+								source(media="(min-width: 769px)" srcset="img/projects/sab-1260.jpg")
+								img(src="img/projects/sab-1260.jpg" alt="sabway" title="sab")
+							.portfolio__grid
+								.portfolio__left
+									h3.portfolio__header.title-3 Роза ветров
+									.portfolio__type Новостной портал
+									.portfolio__content
+										p Господа, современная методология разработки в значительной степени обусловливает важность системы обучения кадров, соответствующей насущным потребностям. Повседневная практика показывает.
+										p Господа, современная методология разработки в значительной степени обусловливает важность такой системы обучения кадров.
+						a(href="javascript:void(0);" style="background-image: url(img/decor/dec12.png)" data-color="#52A3DC").link.portfolio__item.with-parallax
+							picture
+								source(media="(max-width: 620px)" srcset="img/projects/astram-290.jpg")
+								source(media="(max-width: 768px)" srcset="img/projects/astram-728.jpg")
+								source(media="(min-width: 769px)" srcset="img/projects/astram-1260.jpg")
+								img(src="img/projects/astram-1260.jpg" alt="astram" title="astram")
+							.portfolio__grid
+								.portfolio__left
+									h3.portfolio__header.title-3 Роза ветров
+									.portfolio__type Новостной портал
+									.portfolio__content
+										p Господа, современная методология разработки в значительной степени обусловливает важность системы обучения кадров, соответствующей насущным потребностям. Повседневная практика показывает.
+										p Господа, современная методология разработки в значительной степени обусловливает важность такой системы обучения кадров.
+		.services
+			.services__container.container
+				h2.services__title.title-3 Спектр наших услуг
+				.services__cover
+					.services__items
+						a(href="javascript:void(0);").services__item
+							.services__left
+								.services__pic
+									+svg('landing')
+							.services__right
+								.services__article Лендинг
+								.services__content веб-страница, основной задачей которой является сбор контактных данных целевой аудитории
+						a(href="javascript:void(0);").services__item.link
+							.services__left
+								.services__pic
+									+svg('corporate')
+							.services__right
+								.services__article Корпоративный сайт
+								.services__content Представительство компании в интернете для привлечения аудитории
+						a(href="javascript:void(0);").services__item.link
+							.services__left
+								.services__pic
+									+svg('online-store')
+							.services__right
+								.services__article интернет-магазин
+								.services__content Сайт, который содержит товары или услуги Вашей компании
+						a(href="javascript:void(0);").services__item.link
+							.services__left
+								.services__pic
+									+svg('mobile-app')
+							.services__right
+								.services__article Мобильное приложение
+								.services__content Специальное программное обеспечение для мобильной платформы
+						a(href="javascript:void(0);").services__item.link
+							.services__left
+								.services__pic
+									+svg('seo')
+							.services__right
+								.services__article SEO-оптимизация
+								.services__content Повышение позиций сайта в поисковых системах для привлечения целевой аудитории
+						a(href="javascript:void(0);").services__item.link
+							.services__left
+								.services__pic
+									+svg('promotion')
+							.services__right
+								.services__article Продвижение
+								.services__content Комплекс мер по обеспечению посещаемости сайта целевыми посетителями
+						a(href="javascript:void(0);").services__item.link
+							.services__left
+								.services__pic
+									+svg('ad')
+							.services__right
+								.services__article Реклама
+								.services__content Продуктивный механизм для роста продаж и привлечения новых клиентов
+						a(href="javascript:void(0);").services__item.link
+							.services__left
+								.services__pic
+									+svg('support')
+							.services__right
+								.services__article Шаблонная разработка
+								.services__content Используется в качестве готового решения для создания сайтов
+		.client
+			- var quote = 'h4';
+			- var quoteTitle = 'Отзывы наших клиентов';
+			- var quoteInfo = ['Благодарственные письма некоторых компаний, с которыми мы сотрудничали'];
+
+			include ../modules/quote
+			.client__container.container
+				.client__slider.js-client-slider.slider
+					.swiper-wrapper#certificate 
+						a(href="./img/certificate/c1.png").swiper-slide.client__item 
+							img(src="./img/certificate/c1.png")
+						a(href="./img/certificate/c1.png").swiper-slide.client__item 
+							img(src="./img/certificate/c1.png")
+						a(href="./img/certificate/c1.png").swiper-slide.client__item 
+							img(src="./img/certificate/c1.png")
+						a(href="./img/certificate/c1.png").swiper-slide.client__item 
+							img(src="./img/certificate/c1.png")
+						a(href="./img/certificate/c1.png").swiper-slide.client__item 
+							img(src="./img/certificate/c1.png")
+						a(href="./img/certificate/c1.png").swiper-slide.client__item 
+							img(src="./img/certificate/c1.png")
+						a(href="./img/certificate/c1.png").swiper-slide.client__item 
+							img(src="./img/certificate/c1.png")
+						a(href="./img/certificate/c1.png").swiper-slide.client__item 
+							img(src="./img/certificate/c1.png")
+						a(href="./img/certificate/c1.png").swiper-slide.client__item 
+							img(src="./img/certificate/c1.png")
+					.pagination
+				//- .client__cover
+				//- 	.client__items
+				//- 		.client__item.link
+				//- 			
+				//- 		a(href="./img/certificate/c1.png").client__item.link
+				//- 			img(src="./img/certificate/c1.png")
+				//- 		a(href="./img/certificate/c1.png").client__item.link
+				//- 			img(src="./img/certificate/c1.png")
+				//- 		a(href="./img/certificate/c1.png").client__item.link
+				//- 			img(src="./img/certificate/c1.png")
+				//- 		a(href="./img/certificate/c1.png").client__item.link
+				//- 			img(src="./img/certificate/c1.png")
+				include ../modules/partners
+		.place.place--transparent
+			.place__bg(style="background-image: url(img/decor/dec1.png)")
+			.place__container.container
+				h2.place__title.title-3 Как работает Uralmedias
+				.place__text Веб-студия Uralmedias основана в 2011 году в Магнитогорске. Мы применяем собственный подход, уделяем достаточно времени каждому проекту и не работаем на потоке. Всегда готовы предложить нестандартные решения по целому комплексу услуг разработки и дизайна. Делаем всё, чтобы ваш сайт красиво и эффективно выполнял задачи компании. Разработка сайта позволяет создать дополнительный инструмент продаж, неразрывно связанный с бизнесом заказчика. Сайт с правильной навигацией и встроенными сервисами помогает оптимизировать процессы бизнеса, налаживая диалог с потенциальным клиентом. 
+		include ../modules/call
+block script

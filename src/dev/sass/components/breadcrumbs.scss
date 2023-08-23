@@ -1,0 +1,94 @@
+.breadcrumbs {
+    margin-top: 31px;
+
+    @media(max-width: 1024px) {
+        margin-top: 24px;
+    }
+
+    @media(max-width: 620px) {
+        margin-top: 21px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+
+        @media(max-width: 620px) {
+            display: block;
+        }
+    }
+
+    &__link {
+        position: relative;
+        color: $grey-8;
+
+        &:not(:last-child) {
+            padding-right: 7px;
+            margin-right: 5px;
+
+            &:after {
+                position: absolute;
+                content: "";
+                width: 3px;
+                height: 2px;
+                background-color: $grey-8;
+                right: -2px;
+                top: 2px;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+
+        &.active {
+
+            &:hover {
+                color: $green-1;
+            }
+        }
+    }
+
+    &--case {
+        margin-top: 0;
+
+        .breadcrumbs {
+
+            &__container {
+                justify-content: normal;
+                text-align: left;
+            }
+
+            &__link {
+                font-size: 14px;
+                color: rgba(51, 51, 51, 0.92);
+
+                &:not(:last-child) {
+                    margin-right: 15px;
+
+                    &:after {
+                        background-color: rgba(51, 51, 51, 0.92);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.b-page--portfolio {
+
+    .breadcrumbs__container {
+
+        @media(max-width: 620px) {
+            display: flex;
+        }
+    }
+
+    .breadcrumbs--case {
+
+        .breadcrumbs__container {
+
+            @media(max-width: 620px) {
+                display: block
+            }
+        }
+    }
+}

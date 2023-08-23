@@ -1,0 +1,75 @@
+.link {
+
+    &--crumbs {
+        display: inline;
+        font-size: 12px;
+        line-height: 2;
+
+        @media (max-width: 620px) {
+            font-size: 11px;
+            line-height: 1.5;
+        }
+    }
+
+    &--detail {
+        display: inline-block;
+        color: $red-2;
+        font-family: 'OpenSans', sans-serif;
+        position: relative;
+        padding-right: 15px;
+        transition: .3s;
+        font-size: 10px;
+        line-height: 10px;
+        font-weight: bold;
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            background-image: url(../img/icon/arrow-small.svg);
+            background-repeat: no-repeat;
+            width: 11px;
+            height: 9px;
+            transition: 0.2s;
+        }
+
+        &:hover {
+
+            &::after {
+                right: -0.5em;
+            }
+        }
+    }
+
+    &--look {
+        color: $red-2;
+        font-family: 'OpenSans', sans-serif;
+        position: relative;
+        margin-top: auto;
+        transition: .3s;
+        font-size: 10px;
+        line-height: 10px;
+        display: flex;
+        align-items: center;
+
+
+        .link__icon {
+            width: 11px;
+            height: 11px;
+
+            .b-svg {
+                height: 100%;
+                width: 100%;
+                fill: white;
+            }
+        }
+
+        .link__txt {
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-right: 5px;
+            line-height: 11px;
+        }
+    }
+}

@@ -1,0 +1,201 @@
+.offer {
+    margin-top: 55px;
+
+    @media(max-width: 620px) {
+        margin-top: 33px;
+        padding-bottom: 45px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -34px;
+        margin-top: -34px;
+        margin-bottom: 10px;
+
+        @media(max-width: 1300px) {
+            margin-left: -25px;
+            margin-top: -25px;
+        }
+
+        @media(max-width: 768px) {
+            margin-top: -20px;
+            margin-left: -20px;
+        }
+
+        @media(max-width: 500px) {
+            margin-left: 0;
+            margin-top: -16px;
+        }
+    }
+
+    &__item {
+        margin-left: 34px;
+        width: calc(25% - 34px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 15px 34px;
+        min-height: 343px;
+        box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.1);
+        border-radius: 12px;
+        margin-top: 34px;
+        transition: linear .3s;
+
+        @media(max-width: 1300px) {
+            margin-left: 25px;
+            width: calc(25% - 25px);
+            padding: 30px 10px 30px;
+            min-height: 264px;
+            margin-top: 25px;
+        }
+
+        @media(max-width: 1024px) {
+            width: calc(33.333% - 25px);
+        }
+
+        @media(max-width: 768px) {
+            width: calc(50% - 20px);
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        @media(max-width: 620px) {
+            min-height: auto;
+            padding: 18px 5px;
+        }
+
+        @media(max-width: 500px) {
+            flex-direction: initial;
+            width: 100%;
+            margin-left: 0;
+            padding: 0 16px;
+            min-height: 85px;
+            margin-top: 16px;
+
+            &:hover {
+                background-color: $green-1;
+
+                .offer__article {
+                    color: white;
+                }
+
+                .b-svg,
+                svg {
+                    fill: white;
+                }
+
+                path {
+                    fill: white;
+                }
+
+                .svg-fill {
+                    fill: $green-1;
+                }
+
+                .svg-transparent {
+
+                    & path,
+                    rect {
+                        fill: white !important;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .offer {
+                &__link {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .b-svg,
+        svg {
+            transition: linear .3s;
+        }
+    }
+
+    &__pic {
+        height: 90px;
+        width: 90px;
+
+        @media(max-width: 1300px) {
+            height: 60px;
+            width: 60px;
+        }
+
+        @media(max-width: 620px) {
+            height: 52px;
+            width: 52px;
+        }
+
+        @media(max-width: 500px) {
+            margin-right: 13px;
+            min-width: 52px;
+        }
+
+        svg {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+
+            * {
+                fill: none;
+                stroke: $green-1;
+                stroke-width: 3px;
+            }
+        }
+    }
+
+    &__article {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @media(max-width: 620px) {
+            font-size: 16px;
+            line-height: 1.45;
+        }
+
+        @media(max-width: 500px) {
+            text-align: left;
+        }
+    }
+
+    &__content {
+        margin-top: 22px;
+        margin-bottom: 20px;
+    }
+
+    &__txt {
+        max-width: 243px;
+        margin-top: 4px;
+        font-size: 14px;
+        line-height: 1.5;
+
+        @media(max-width: 620px) {
+            display: none;
+        }
+    }
+
+    &__link {
+        font-size: 10px;
+        line-height: 10px;
+        opacity: 0;
+        margin-top: auto;
+    }
+
+    .offer__item .offer__link {
+        @media(max-width: 500px) {
+            display: none;
+        }
+    }
+
+    .offer__item .svg-transparent {
+        fill: none;
+    }
+}

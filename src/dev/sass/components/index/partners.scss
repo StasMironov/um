@@ -1,0 +1,210 @@
+.partners {
+    max-width: 990px;
+    width: 100%;
+    margin: 34px auto 0;
+
+    @media(max-width: 1024px) {
+        max-width: 678px;
+        margin-top: 30px;
+        margin-bottom: 34px;
+    }
+
+    @media(max-width: 620px) {
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
+
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+
+        img {
+            height: auto;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        @media(max-width: 500px) {
+            width: 80%;
+        }
+
+        &:nth-of-type(n + 9) {
+
+            @media(max-width: 620px) {
+                display: none;
+            }
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+        grid-auto-rows: 140px;
+        grid-column-gap: 90px;
+        grid-row-gap: 21px;
+        justify-items: center;
+        align-items: center;
+
+        @media(max-width: 1600px) {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-column-gap: 50px;
+            grid-row-gap: 21px;
+        }
+
+        @media(max-width: 1235px) {
+            grid-column-gap: 23px;
+        }
+
+        @media(max-width: 1024px) {
+            grid-template-columns: repeat(auto-fit, minmax(123px, 1fr));
+            grid-column-gap: 61px;
+            grid-auto-rows: 112px;
+            grid-row-gap: 12px;
+        }
+
+        @media(max-width: 767px) {
+            grid-template-columns: repeat(auto-fit, minmax(107px, 1fr));
+            grid-row-gap: 40px;
+            grid-column-gap: 40px;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 620px) {
+            grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+            grid-auto-rows: 51px;
+            grid-row-gap: 25px;
+            grid-column-gap: 25px;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 500px) {
+            grid-column-gap: 34px;
+            grid-template-columns: repeat(auto-fit, minmax(123px, 1fr));
+            grid-row-gap: 11px;
+            grid-auto-rows: 120px;
+        }
+    }
+
+    &__slider {
+        @media(max-width: 1024px) {
+            max-width: 90vw;
+        }
+
+        @media(max-width: 620px) {
+            max-width: calc(95vw - 35px);
+        }
+    }
+
+    &__title {
+        position: relative;
+        padding-bottom: 46px;
+        margin-bottom: 37px;
+
+        @media(max-width: 1024px) {
+            line-height: 35px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+        }
+
+        @media(max-width: 620px) {
+            text-align: left;
+            padding-bottom: 15px;
+            margin-bottom: 12px;
+            line-height: 30px;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: auto;
+            margin: auto;
+            max-width: 80px;
+            width: 100%;
+            background-color: $red-2;
+            height: 2px;
+
+            @media(max-width: 620px) {
+                right: auto;
+                max-width: 48px;
+            }
+        }
+    }
+
+    &__quote {
+        text-align: center;
+
+        @media(max-width: 620px) {
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+
+    &+.call {
+        margin-top: 90px;
+        padding-top: 0;
+
+        @media(max-width: 620px) {
+            margin-top: 60px;
+        }
+
+
+        @media(max-width: 620px) {
+            margin-top: 40px;
+            padding-top: 0;
+        }
+    }
+
+    &--about {
+        margin: 20px auto 0;
+        padding-bottom: 45px;
+    }
+
+    &--special {
+        margin: 76px auto 0;
+
+        @media(max-width: 1024px) {
+            margin-top: 55px;
+        }
+
+        @media(max-width: 620px) {
+            padding-bottom: 0;
+        }
+
+        .partners {
+            &__items {
+                margin-top: 58px;
+
+                @media(max-width: 620px) {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 80px;
+
+            @media(max-width: 1024px) {
+                margin-bottom: 55px;
+            }
+
+            @media(max-width: 620px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
